@@ -1,0 +1,24 @@
+﻿<h1>Formula Cars</h1>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    @for (var i = 0; i < ViewBag.Cars.Count; i++)
+    {
+        <tr>
+            <th scope="row">@i</th>
+            <td>@ViewBag.Cars[i]</td>
+            <td>
+                <a asp-controller="Cars" asp-action="Delete" asp-route-id="@i">X</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

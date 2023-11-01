@@ -4,7 +4,7 @@ namespace Web.Controllers;
 
 public class CarsController : Controller
 {
-    public List<string> Cars { get; set; } = new();
+    public static List<string> Cars { get; set; } = new();
 
     public CarsController()
     {
@@ -17,5 +17,12 @@ public class CarsController : Controller
     {
         ViewBag.Cars = Cars;
         return View();
+    }
+
+    public IActionResult Delete(int id)
+    {
+        // delete the selected car from Cars
+        Cars.RemoveAt(id);
+        return RedirectToAction("Index");
     }
 }
