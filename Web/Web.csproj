@@ -6,4 +6,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <AdditionalFiles Include="Views\Cars2\Add.cshtml" />
+      <AdditionalFiles Include="Views\Cars2\Edit.cshtml" />
+      <AdditionalFiles Include="Views\Cars2\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
